@@ -1,5 +1,6 @@
 const express = require('express');
 const mongodb = require('mongodb').MongoClient;
+const mongoose = require('mongoose');
 
 const app = express();
 const port = 3001 || process.port.env;
@@ -31,7 +32,7 @@ mongodb.connect(
     db.collection('User').insertOne({ username: "bobbybob", email: "bobbyb@test.com"} );
     db.collection('User').insertOne({ username: "ellen", email: "elle@test.com"} );
 
-    
+    db.collection("Thought").insertOne({ thoughtsText: "example", })
 
     app.listen(port, () => {
       console.log(`Example app listening at http://localhost:${port}`);
