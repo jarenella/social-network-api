@@ -1,11 +1,16 @@
 const router = require('express').Router();
+const userRoutes = require('./userRoutes');
+const thoughtRoutes = require('./thoughtRoutes');
+const friendRoutes = require('./friendRoutes');
 
 router.get('/', (req, res) => {
     res.send("hi");
 });
 
-router.get('/test', (req, res) => {
-    res.send("hi2");
-});
+router.use('/users', userRoutes);
+
+router.use('/thoughts', thoughtRoutes);
+
+router.use('/friends', friendRoutes);
 
 module.exports = router;
