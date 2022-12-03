@@ -1,26 +1,18 @@
 {
-  "name": "social-network-api",
+  "name": "tes",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node ./seeds/seeds.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jarenella/social-network-api.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jarenella/social-network-api/issues"
-  },
-  "homepage": "https://github.com/jarenella/social-network-api#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "mongodb": "^4.12.1",
-    "mongoose": "^6.7.5",
-    "nodemon": "^2.0.20"
+    "mongoose": "^6.7.5"
   }
 }
