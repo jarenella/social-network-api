@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const Reaction = require('../../models/Reaction');
 const Thought = require('../../models/Thought');
 
 // /thoughts route
@@ -42,16 +43,21 @@ router.delete('/:id', async (req, res) => {
     res.send("Delete request successfully recieved");
 })
 
-// /thoughts/:thoughtID/reaction post route
+// /thoughts/reaction/:thoughtID post route
 // creates a reaction to the post specified in the request parameters
-router.post('/:thoughtID/reaction', (req, res) => {
-    res.send(`create a reaction to the post of ID ${req.params.id}`)
+router.post('/reaction/:thoughtID', async (req, res) => {
+    const reactionBody = req.body.reactionBody;
+    const userName = req.body.username;
+    const reactedThought = await Thought.findOne({_id: req.params.thoughtID});
+    const reaction = await Reaction.create({reactionBody: reactionBody, username: userName, thoughtID: reactedThought});
+    res.send(`Reaction added to thought of ID: ${req.params.thoughtID}`);
 })
 
-// /thoughts/:thoughtID/reaction delete route
+// /thoughts/reaction/:thoughtID delete route
 // deletes a reaction from a post specified in the request parameters
-router.delete('/:thoughtID/reaction', (req, res) => {
-    res.send(`delete a reaction to the post of ID ${req.params.id}`)
+router.delete('/reaction/:reactionID', async (req, res) => {
+    const deletedReaction = await Reaction.deleteOne({_id: req.params.reactionID});
+    res.send(`Request to delete a reaction of ID: ${req.params.reactionID} successfully recieved`);
 })
 
 module.exports = router;
