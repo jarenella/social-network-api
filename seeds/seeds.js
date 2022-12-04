@@ -24,8 +24,8 @@ async function seedDB() {
 
     //seed reactions (aka comments)
     const reaction = await Reaction.create([
-        { reactionBody: 'real cool, mannnn', username: "datkidd" }, 
-        { reactionBody: 'ok... now this is epic', username: "banana" }
+        { reactionBody: 'real cool, mannnn', username: "datkidd", thoughtID: thought[1] }, 
+        { reactionBody: 'ok... now this is epic', username: "banana", thoughtID: thought[0] }
     ])
     console.log(reaction + "\n-----------\nreactions seeded\n-----------");
 }

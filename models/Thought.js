@@ -9,7 +9,8 @@ const thoughtSchema = new mongoose.Schema({
     userID: {
         type:mongoose.Schema.Types.ObjectId,
         ref: 'User'
-    }
+    },
+    reactions : [{type: mongoose.Schema.Types.ObjectId, ref:'Reaction'}]
 })
 
 //example of how to add a method

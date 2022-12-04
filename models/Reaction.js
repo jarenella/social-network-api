@@ -9,6 +9,10 @@ const reactionSchema = new mongoose.Schema({
         type:String,
         required: true
     },
+    thoughtID: {
+        type:mongoose.Schema.Types.ObjectId,
+        ref: 'Thought'
+    },
     createdAt: {
         type: Date, 
         default: Date.now
