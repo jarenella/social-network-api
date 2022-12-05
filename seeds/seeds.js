@@ -11,6 +11,12 @@ async function seedDB() {
     ]);
     console.log(user + "\n-----------\nusers seeded\n-----------");
 
+    //give a user a friend
+    const friend = await User.findOne({_id: user[0]._id});
+    friend.friends.push(user[1]._id);
+    friend.save();
+    //await Student.updateOne({ _id: 1 }, { $push: { friends: 'Maria' } })
+
     //seed thoughts (aka posts)
     const thought = await Thought.create([
         { body: 'Hey guys this is my post isnt it so cool', userID: user[0] }, 
