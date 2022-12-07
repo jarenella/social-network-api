@@ -22,7 +22,7 @@ This project is a sample that can be used as an example of a very basic backend 
 
 # Installation
 
-If you would like to use this as a sort of starting template for your own project, clone it into your own repo and make sure to install related NPM dependencies. You will also have to run the seed script which can be found in package.json to seed mongoDB. This is only really necessary if you would like to use the starting seeds before starting the server.
+If you would like to use this as a sort of starting template for your own project, clone it into your own repo and make sure to install related NPM dependencies. You will also have to run the seed script which can be found in package.json to seed mongoDB. This should only really be necessary if you would like to use the starting seeds before starting the server. You can also add your own seeds or expand upon the ones here by going into the seeds file where you can edit the seed.js folder. I would recommend this if you want to test the API with more data, as the included seeds are relatively minimal.
 
 # Usage Information
 
