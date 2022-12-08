@@ -4,7 +4,7 @@
 
 # Description
 
-This project is a sample that can be used as an example of a very basic backend API system for a social network. It can also easily be configured to have larger projects build on top of it and deployed.
+This project is a sample that can be used as an example of a very basic backend API system for a social network. It can also easily be configured to have larger projects built on top of it and deployed.
 
 # Table of Contents
 
