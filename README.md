@@ -10,6 +10,8 @@ This project is a sample that can be used as an example of a very basic backend 
 
 - [Description](#Description)
 
+- [Walkthrough](#Walkthrough)
+
 - [Installation](#Installation)
 
 - [Usage Information](#Usage-Information)
@@ -19,6 +21,10 @@ This project is a sample that can be used as an example of a very basic backend 
 - [Test instructions](#Test-instructions)
 
 - [License](#License)
+
+# Walkthrough
+
+Here you can find a walkthrough video demonstrating this functionality of this application: https://watch.screencastify.com/v/02gePeLukCrl4wFWc5fk
 
 # Installation
 
